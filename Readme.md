@@ -8,7 +8,7 @@ Microsoft.EntityFrameworkCore.Design
 Microsoft.AspNetCore.Identity.EntityFramework //Microsoft.Extensions.Identity.Core   //Microsoft.AspNetCore.Identity
 Microsoft.AspNetCore.Identity.EntityFramework
 
-
+SendGrid
 
 
 
