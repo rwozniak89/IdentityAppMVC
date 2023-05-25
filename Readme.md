@@ -9,8 +9,8 @@ Microsoft.AspNetCore.Identity.EntityFramework //Microsoft.Extensions.Identity.Co
 Microsoft.AspNetCore.Identity.EntityFramework
 
 SendGrid
-
-
+Microsoft.AspNetCore.Authentication.Google
+Microsoft.AspNetCore.Authentication.Facebook
 
 
 #Developer PowerShell 

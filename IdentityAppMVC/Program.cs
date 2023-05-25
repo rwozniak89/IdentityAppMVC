@@ -18,6 +18,19 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddTransient<ISendGridEmail, SendGridEmail>();
 builder.Services.Configure<AuthMessageSenderOptions>(builder.Configuration.GetSection("SendGrid"));
+
+builder.Services.AddAuthentication()
+.AddFacebook(options =>
+{
+    options.AppId = "test";
+    options.AppSecret = "test";
+})
+.AddGoogle(options =>
+{
+    options.ClientId = "test";
+    options.ClientSecret = "test";
+});
+
 builder.Services.Configure<IdentityOptions>(opt =>
 {
     opt.Password.RequiredLength = 5;
