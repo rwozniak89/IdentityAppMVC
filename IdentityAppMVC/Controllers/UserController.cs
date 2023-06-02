@@ -73,12 +73,12 @@ namespace IdentityAppMVC.Controllers
                 {
                     return NotFound();
                 }
+                userDbValue.NickName = user.NickName;
                 var userRole = _db.UserRoles.FirstOrDefault(u => u.UserId == userDbValue.Id);
                 if (userRole != null)
                 {
                     var previousRoleName = _db.Roles.Where(u => u.Id == userRole.RoleId).Select(e => e.Name).FirstOrDefault();
                     await _userManager.RemoveFromRoleAsync(userDbValue, previousRoleName);
-
                 }
 
                 await _userManager.AddToRoleAsync(userDbValue, _db.Roles.FirstOrDefault(u => u.Id == user.RoleId).Name);
